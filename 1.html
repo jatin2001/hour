@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script language="JavaScript">
+    function showInput() {
+        var n=  parseInt(document.getElementById("pe").value);
+        var m=  parseInt(document.getElementById("cpo").value);
+        var a=  parseInt(document.getElementById("cl").value);
+        if(a+m<n)
+        {
+        var ans = n*(426)-m*(120)-a*(240);
+        }
+        document.getElementById('display').innerHTML = Math.floor(ans/60)+" hours "+ ans%60 +" minute ";
+                   
+    }
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+      body{
+          align-items: center;
+          text-align: center;
+          background-color: aquamarine;
+      }
+      .a{
+          width:95%;
+          margin-top:10%;
+          display:flex;
+          flex-direction: column;
+      }
+      form{
+          width: 100%;
+          height:75%;
+      }
+      input{
+          height: 5em;
+          font-size:2.5em;
+          font-weight: 600;
+          font-style: inherit;
+          color:blue;
+          border: 5px solid black;
+          border-radius: 5px;
+          
+      }
+      label{
+          font-size: 3.7em;
+          font-weight: 700;
+      }
+      .b{
+          width: 100%;
+      }
+      h1{
+          font-size: 5em;
+          color:red;
+          font-weight: 700;
+      }
+      h2{
+          font-size:5em;
+      }
+      
+  </style>
+
+  </head>
+<body>
+<div class ="a">
+    <h1><a href="./index.html"><i class="material-icons" style="font-size:6rem;font-weight: 800;margin-left: -25%;margin-bottom:-2%;color: brown">arrow_back</i></a>
+           &nbsp &nbsp Calculator</h1>
+    <form>
+        <label class="b">Enter Total No. of Employee</label>
+        <input type="text" name="pe" id="pe" class="b">
+        <br>
+        <label class="b"> Total No. of CPRO</label>
+        <input type="text" name="cpo" id="cpo" class="b">    
+        <br>
+        <label class="b"> Total No. of Half CL</label>
+        <input type="text" name="cl" id="cl" class="b">    
+        <br>
+    </form>
+    <br>
+  <input type="submit" onclick="showInput();" class="b"> <br/>
+  <h2>Total Hours: </h2>
+  <p><h1 id='display'></h1></p>
+</div>
+  
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>
