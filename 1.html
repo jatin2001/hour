@@ -8,9 +8,17 @@
         var n=  parseInt(document.getElementById("pe").value);
         var m=  parseInt(document.getElementById("cpo").value);
         var a=  parseInt(document.getElementById("cl").value);
-        if(a+m<=n)
+        var a1=  parseInt(document.getElementById("a1").value);
+        var a2=  parseInt(document.getElementById("a2").value);
+        var a3=  parseInt(document.getElementById("a3").value);
+        var a4=  parseInt(document.getElementById("a4").value);
+        var t1=15*a1;
+        var t2=30*a2;
+        var t3=45*a3;
+        var t4=60*a3;
+        if(a+m<=n && (a1+a2+a3+a4<=n))
         {
-        var ans = n*(426)-m*(120)-a*(240);
+        var ans = n*(426)-m*(120)-a*(240)-(t1+t2+t3+t4);
         }
         document.getElementById('display').innerHTML = Math.floor(ans/60)+" hours "+ ans%60 +" minute ";
                    
@@ -74,7 +82,15 @@
         <input type="number" name="cpo" id="cpo" class="b">    
         <br>
         <label class="b"> Total No. of Half CL</label>
-        <input type="number" name="cl" id="cl" class="b">    
+        <input type="number" name="cl" id="cl" class="b"> 
+        <label class="b"> Total No. Employee 15min Late</label>
+        <input type="number" name="a1" id="a1" class="b">  
+        <label class="b"> Total No. Employee 30min Late</label>
+        <input type="number" name="a2" id="a2" class="b">  
+        <label class="b"> Total No. Employee 45min Late</label>
+        <input type="number" name="a3" id="a3" class="b">  
+        <label class="b"> Total No. Employee 1hour Late</label>
+        <input type="number" name="a4" id="a4" class="b">        
         <br>
     </form>
     <br>
